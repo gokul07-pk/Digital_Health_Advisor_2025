@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Assessment - HealthAdvisor</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/assessment.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <div class="health-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h2>HealthAdvisor</h2>
+            <span>Digital Health Assessment</span>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="health-tips.html" class="nav-link">Health Tips</a>
+          <a href="emergency.html" class="nav-link">Emergency</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="assessment-main">
+      <div class="progress-container">
+        <div class="progress-steps">
+          <div class="step active" data-step="1">1</div>
+          <div class="step" data-step="2">2</div>
+          <div class="step" data-step="3">3</div>
+          <div class="step" data-step="4">4</div>
+        </div>
+      </div>
+
+      <div class="assessment-container">
+        <div class="step-content" id="step-1">
+          <h2 class="step-title">Select Symptoms</h2>
+          <div class="question-section">
+            <h3 class="question-title">What symptoms are you experiencing?</h3>
+            <p class="question-subtitle">Select all symptoms that apply to you</p>
+          </div>
+
+          <div class="symptoms-container">
+            <div class="symptom-category">
+              <h4 class="category-title">General Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="fever">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Fever</div>
+                    <div class="symptom-description">Body temperature above 100.4°F (38°C)</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="fatigue">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Fatigue</div>
+                    <div class="symptom-description">Feeling tired or exhausted</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="chills">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Chills</div>
+                    <div class="symptom-description">Feeling cold and shivering</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="body-aches">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Body Aches</div>
+                    <div class="symptom-description">Muscle pain throughout the body</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="weight-loss">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Unexplained Weight Loss</div>
+                    <div class="symptom-description">Losing weight without trying</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="headache">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Headache</div>
+                    <div class="symptom-description">Pain or discomfort in the head</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Respiratory Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="cough">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Cough</div>
+                    <div class="symptom-description">Persistent coughing</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="shortness-breath">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Shortness of Breath</div>
+                    <div class="symptom-description">Difficulty breathing or catching breath</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="sore-throat">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Sore Throat</div>
+                    <div class="symptom-description">Pain or scratchiness in throat</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="runny-nose">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Runny Nose</div>
+                    <div class="symptom-description">Nasal discharge or congestion</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="wheezing">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Wheezing</div>
+                    <div class="symptom-description">High-pitched whistling sound when breathing</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="chest-tightness">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Chest Tightness</div>
+                    <div class="symptom-description">Feeling of pressure or constriction in chest</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Digestive Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="nausea">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Nausea</div>
+                    <div class="symptom-description">Feeling sick to your stomach</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="vomiting">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Vomiting</div>
+                    <div class="symptom-description">Throwing up stomach contents</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="diarrhea">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Diarrhea</div>
+                    <div class="symptom-description">Loose or watery bowel movements</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="abdominal-pain">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Abdominal Pain</div>
+                    <div class="symptom-description">Pain or cramping in the stomach area</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="constipation">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Constipation</div>
+                    <div class="symptom-description">Difficulty having bowel movements</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="loss-appetite">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Loss of Appetite</div>
+                    <div class="symptom-description">Reduced desire to eat</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Neurological Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="dizziness">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Dizziness</div>
+                    <div class="symptom-description">Feeling lightheaded or unsteady</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="confusion">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Confusion</div>
+                    <div class="symptom-description">Difficulty thinking clearly or concentrating</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="memory-problems">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Memory Problems</div>
+                    <div class="symptom-description">Difficulty remembering things</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="numbness">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Numbness</div>
+                    <div class="symptom-description">Loss of sensation in hands, feet, or face</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="seizures">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Seizures</div>
+                    <div class="symptom-description">Sudden, uncontrolled electrical activity in brain</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="vision-changes">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Vision Changes</div>
+                    <div class="symptom-description">Blurred vision or visual disturbances</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Cardiovascular Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="chest-pain">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Chest Pain</div>
+                    <div class="symptom-description">Pain or pressure in the chest area</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="palpitations">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Heart Palpitations</div>
+                    <div class="symptom-description">Feeling of rapid or irregular heartbeat</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="swelling">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Swelling</div>
+                    <div class="symptom-description">Swelling in legs, ankles, or feet</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="rapid-heartbeat">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Rapid Heartbeat</div>
+                    <div class="symptom-description">Heart rate over 100 beats per minute</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="fainting">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Fainting</div>
+                    <div class="symptom-description">Loss of consciousness or near-fainting</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="high-blood-pressure">
+                  <div class="symptom-content">
+                    <div class="symptom-name">High Blood Pressure</div>
+                    <div class="symptom-description">Elevated blood pressure readings</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Dermatological Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="rash">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Rash</div>
+                    <div class="symptom-description">Red, irritated, or inflamed skin</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="itching">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Itching</div>
+                    <div class="symptom-description">Persistent urge to scratch skin</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="dry-skin">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Dry Skin</div>
+                    <div class="symptom-description">Flaky, rough, or cracked skin</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="hives">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Hives</div>
+                    <div class="symptom-description">Raised, red, itchy welts on skin</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="bruising">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Easy Bruising</div>
+                    <div class="symptom-description">Bruises appearing with minimal trauma</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="skin-discoloration">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Skin Discoloration</div>
+                    <div class="symptom-description">Changes in skin color or pigmentation</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="symptom-category">
+              <h4 class="category-title">Musculoskeletal Symptoms</h4>
+              <div class="symptoms-grid">
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="joint-pain">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Joint Pain</div>
+                    <div class="symptom-description">Pain in knees, hips, shoulders, or other joints</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="muscle-weakness">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Muscle Weakness</div>
+                    <div class="symptom-description">Reduced strength in muscles</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="back-pain">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Back Pain</div>
+                    <div class="symptom-description">Pain in lower, middle, or upper back</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="stiffness">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Stiffness</div>
+                    <div class="symptom-description">Reduced flexibility in joints or muscles</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="neck-pain">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Neck Pain</div>
+                    <div class="symptom-description">Pain or stiffness in neck area</div>
+                  </div>
+                </label>
+
+                <label class="symptom-item">
+                  <input type="checkbox" name="symptoms" value="muscle-cramps">
+                  <div class="symptom-content">
+                    <div class="symptom-name">Muscle Cramps</div>
+                    <div class="symptom-description">Sudden, involuntary muscle contractions</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn-secondary" onclick="window.location.href='index.html'">Back</button>
+            <button class="btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+
+        <div class="step-content hidden" id="step-2">
+          <h2 class="step-title">Duration & Severity</h2>
+          <div class="question-section">
+            <h3 class="question-title">How long have you been experiencing these symptoms?</h3>
+            <div class="duration-options">
+              <label class="radio-item">
+                <input type="radio" name="duration" value="1-2-days">
+                <span>1-2 days</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="duration" value="3-7-days">
+                <span>3-7 days</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="duration" value="1-2-weeks">
+                <span>1-2 weeks</span>
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="duration" value="more-than-2-weeks">
+                <span>More than 2 weeks</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="question-section">
+            <h3 class="question-title">How would you rate the severity?</h3>
+            <div class="severity-scale">
+              <div class="scale-item" data-severity="1">
+                <div class="scale-number">1</div>
+                <span>Mild</span>
+              </div>
+              <div class="scale-item" data-severity="2">
+                <div class="scale-number">2</div>
+                <span>Moderate</span>
+              </div>
+              <div class="scale-item" data-severity="3">
+                <div class="scale-number">3</div>
+                <span>Severe</span>
+              </div>
+              <div class="scale-item" data-severity="4">
+                <div class="scale-number">4</div>
+                <span>Very Severe</span>
+              </div>
+              <div class="scale-item" data-severity="5">
+                <div class="scale-number">5</div>
+                <span>Extreme</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn-secondary" onclick="previousStep()">Back</button>
+            <button class="btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+
+        <div class="step-content hidden" id="step-3">
+          <h2 class="step-title">Additional Information</h2>
+          <div class="question-section">
+            <h3 class="question-title">Do you have any of the following?</h3>
+            <div class="additional-info">
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="diabetes">
+                <span>Diabetes</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="heart-disease">
+                <span>Heart Disease</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="high-blood-pressure">
+                <span>High Blood Pressure</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="asthma">
+                <span>Asthma</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="allergies">
+                <span>Allergies</span>
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="conditions" value="none">
+                <span>None of the above</span>
+              </label>
+
+            </div>
+          </div>
+
+          <div class="question-section">
+            <h3 class="question-title">Are you currently taking any medications?</h3>
+            <textarea class="medication-input" placeholder="Please list any medications you're currently taking..." rows="4"></textarea>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn-secondary" onclick="previousStep()">Back</button>
+            <button class="btn-primary" onclick="nextStep()">Continue</button>
+          </div>
+        </div>
+
+        <div class="step-content hidden" id="step-4">
+          <h2 class="step-title">Assessment Results</h2>
+          <div class="results-container">
+            <div class="result-card" id="assessment-result">
+              <!-- Results will be populated by JavaScript -->
+            </div>
+            <div class="disclaimer">
+              <p><strong>Medical Disclaimer:</strong> This assessment is for informational purposes only and should not replace professional medical advice. Please consult with a healthcare provider for proper diagnosis and treatment.</p>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn-secondary" onclick="previousStep()">Back</button>
+            <button class="btn-primary" onclick="window.location.href='index.html'">Start New Assessment</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/assessment.js"></script>
+  </body>
+</html>
